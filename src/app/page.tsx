@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { TopNav } from "@/components/top-nav";
 import { PageShell } from "@/components/ui";
@@ -22,10 +23,16 @@ export default function Home() {
     <PageShell>
       <TopNav />
 
-      <section className="grid gap-12 pt-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-center xl:pt-16">
+      <section className="grid gap-12 pt-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-center xl:pt-14">
         <div className="space-y-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-orange-300/75">Cadena de Tierra</p>
-          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.92] md:text-7xl xl:text-[92px]">
+          <div className="flex items-center gap-4">
+            <div className="relative h-16 w-24 overflow-hidden rounded-2xl bg-white/5">
+              <Image src="/logo.webp" alt="Cadena de Tierra" fill className="object-contain" priority />
+            </div>
+            <p className="text-xs uppercase tracking-[0.3em] text-orange-300/75">Cadena de Tierra</p>
+          </div>
+
+          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.92] md:text-7xl xl:text-[88px]">
             Compra, redime y visualiza caliche de una forma más clara.
           </h1>
           <p className="max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
@@ -43,21 +50,19 @@ export default function Home() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
-          <VisualBlock title="Compra el derecho de extracción sin pasos innecesarios." subtitle="Compra" />
-          <VisualBlock title="Redime solo lo que necesitas y deja trazabilidad visible." subtitle="Redención" />
-          <div className="md:col-span-2 relative overflow-hidden rounded-[38px] bg-white/[0.03] p-8 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl">
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.03),transparent_40%,rgba(59,130,246,0.04))]" />
-            <div className="relative grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
-              <div>
-                <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Estado</p>
-                <p className="mt-4 text-5xl font-semibold text-orange-400">10,000</p>
-                <p className="mt-3 text-sm text-slate-400">m³ de referencia visibles para la demo</p>
+          <div className="md:col-span-2 relative overflow-hidden rounded-[40px] bg-white/[0.03] p-8 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+            <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_45%,rgba(249,115,22,0.05))]" />
+            <div className="relative grid gap-6 md:grid-cols-[0.7fr_1.3fr] md:items-end">
+              <div className="relative h-40 w-full overflow-hidden rounded-[28px] bg-white/5">
+                <Image src="/logo.webp" alt="Logo Cadena de Tierra" fill className="object-contain p-4" priority />
               </div>
               <p className="max-w-xl text-base leading-8 text-slate-300">
                 El sistema está pensado para mostrar compra, redención y estado del material sin esconder la información detrás de procesos opacos o paneles complicados.
               </p>
             </div>
           </div>
+          <VisualBlock title="Compra el derecho de extracción sin pasos innecesarios." subtitle="Compra" />
+          <VisualBlock title="Redime solo lo que necesitas y deja trazabilidad visible." subtitle="Redención" />
         </div>
       </section>
 
@@ -78,9 +83,9 @@ export default function Home() {
         </div>
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.24em] text-slate-500">03</p>
-          <h2 className="text-2xl font-semibold">Una narrativa humana</h2>
+          <h2 className="text-2xl font-semibold">Marca más humana</h2>
           <p className="text-sm leading-7 text-slate-400">
-            El objetivo no es mostrar blockchain por blockchain, sino una manera más clara de operar un recurso real.
+            El logo entra como parte central de la identidad visual para que la experiencia se sienta más propia y menos genérica.
           </p>
         </div>
       </section>
