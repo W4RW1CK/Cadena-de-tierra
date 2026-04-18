@@ -1,41 +1,50 @@
 # BACKEND_STRUCTURE
 
-## MVP actual
-El MVP no depende de un backend tradicional.
+## Current MVP reality
+No existe un backend implementado en esta etapa.
 
-## Núcleo actual
-- Smart contract como capa principal de estado
-- Frontend conectado directamente por ethers.js
-- Wallet del usuario como autenticación operativa para demo
+## Current system architecture
+### Layer 1. Frontend
+- Next.js UI
+- wallet connection
+- transaction triggers
+- state visualization
 
-## Estructura lógica del sistema
-### Capa 1. Frontend
-- Interfaz de compra
-- Interfaz de redención
-- Visualización del estado on-chain
+### Layer 2. Smart contract
+- source of truth for balances
+- source of truth for total inventory
+- source of truth for remaining inventory
+- source of truth for burned material
 
-### Capa 2. Smart contract
-- Guarda balances
-- Registra inventario total
-- Registra inventario restante
-- Registra burn de material consumido
+## Current auth model
+- MetaMask wallet acts as demo authentication layer
+- no email/password auth
+- no server session
 
-## Roadmap backend futuro
-### Servicio de oráculo
+## API layer
+- none in MVP
+- frontend interacts directly with the contract through ethers.js
+
+## Storage layer
+- none in MVP outside blockchain state
+
+## Future backend roadmap, not MVP
+### Oracle service
 - recibe datos de báscula
 - valida pesos
-- dispara burn o redención automatizada
+- dispara redención y burn automatizados
 
-### Servicio de permisos
-- genera acceso/QR para operador o chofer
+### Permission service
+- genera acceso o QR para operador o chofer
 - asocia permiso temporal con comprador
 
-### Servicio de pagos
+### Payment service
 - recibe fiat
-- convierte o refleja compra on-chain
+- refleja la compra on-chain
 
-## No incluido en MVP
-- Base de datos operativa
-- Panel de administración completo
-- Integración con ERP
-- Logs industriales reales
+## Explicitly not implemented
+- database schema
+- REST API
+- admin dashboard backend
+- ERP integration
+- industrial event logging service

@@ -1,21 +1,25 @@
 Cadena de Tierra - Estado actual
 
-[COMPLETADO]
-- Base del repo creada
-- Next.js inicializado
+DONE
+- Repo creado
+- Base Next.js creada
 - ethers instalado
 - Contrato base creado
 - Frontend base creado
 - Primer push realizado
-- Carpeta de progreso creada
+- Carpeta docs/progreso creada
+- Documentación principal creada
 - Concepto del MVP cerrado
 - One-liner definido
 - Pantallas principales definidas: Compra y Redención
 
-[EN CURSO]
+IN PROGRESS
 - Deploy del contrato en Remix
 - Conexión del frontend al contrato desplegado
 
-[PENDIENTE]
-- Flujo demo completo
-- Pitch final
+NEXT
+- Obtener contract address en Monad testnet
+- Crear .env.local
+- Levantar app localmente
+- Validar flujo compra y redención
+- Preparar pitch final

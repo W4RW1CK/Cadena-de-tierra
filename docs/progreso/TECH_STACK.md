@@ -1,38 +1,57 @@
 # TECH_STACK
 
-## Frontend
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- ethers.js
+## Locked stack for MVP
 
-## Smart contract
+### Frontend
+- Next.js 16.x
+- React 19.x
+- TypeScript 5.x
+- Tailwind CSS 4.x
+- ethers 6.x
+
+### Smart contract
 - Solidity ^0.8.20
-- Contrato base simple para demo
 
-## Blockchain
+### Blockchain
 - Monad testnet
-- MetaMask para conexión de wallet
+- MetaMask
 
-## Contrato actual
-Archivo:
-- `contracts/CadenaDeTierra.sol`
+## Current repository implementation
+- Next.js app router project
+- Frontend in `src/app/`
+- Contract in `contracts/CadenaDeTierra.sol`
 
-## Variables clave del contrato
+## Current contract structure
+### State
 - `totalSupply`
 - `totalInventory`
 - `remainingInventory`
 - `totalBurned`
 - `balanceOf`
 
-## Funciones clave del contrato
+### Functions
 - `buyTokens(uint256 amount)`
 - `redeemAndBurn(uint256 amount)`
 - `getRemainingInventory()`
 
-## Infraestructura futura, no MVP
-- Oráculo para báscula
-- IoT / hardware físico
-- Wallet embedida
-- Servicio para pagos fiat
+## Dependencies currently assumed by the app
+- next
+- react
+- react-dom
+- ethers
+- typescript
+- tailwindcss
+- eslint
+
+## Infrastructure explicitly not required for MVP
+- traditional backend server
+- database
+- oracle service
+- IoT integration
+- fiat rails
+
+## Future stack, not MVP
+- oracle for báscula data
+- IoT hardware integration
+- embedded wallet
+- payment service for fiat entry

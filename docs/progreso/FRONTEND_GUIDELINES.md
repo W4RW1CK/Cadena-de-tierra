@@ -1,47 +1,54 @@
 # FRONTEND_GUIDELINES
 
-## Objetivo del frontend
+## Frontend objective
 Mostrar de forma clara y simple el flujo de compra y redención de caliche.
 
-## Principios
+## UX principles
 - Mostrar valor de negocio antes que tecnicismos
-- Evitar jerga innecesaria
-- Hacer evidente la compra, redención y actualización del inventario
-- Mantener UI limpia y directa
+- Mantener el flujo visualmente obvio
+- Hacer evidente compra, redención y actualización del inventario
+- Mantener la interfaz limpia, directa y rápida de entender
 
-## Pantallas principales
-### 1. Compra
+## Required sections
+### Compra
 Debe permitir:
 - conectar wallet
 - ingresar cantidad
-- comprar tokens/derecho de extracción
+- comprar derecho de extracción
 
-### 2. Redención
+### Redención
 Debe permitir:
 - ver saldo actual
 - ingresar cantidad a redimir
 - ejecutar redención y burn
 
-## Métricas visibles
-- Inventario total
-- Inventario restante
-- Tokens quemados
-- Balance del usuario
+### Shared metrics
+- inventario total
+- inventario restante
+- tokens quemados
+- balance del usuario
+- estado de transacción
 
-## Copy recomendado
-Usar lenguaje como:
+## Copy system
+### Preferred language
 - compra de derecho de extracción
 - redención de material
 - inventario restante
 - operación verificada en tiempo real
+- material consumido
 
-Evitar depender demasiado de palabras como:
+### Avoid overusing
 - descentralización
 - tokenomics
 - infraestructura
+- jerga técnica innecesaria
 
-## Prioridad visual
+## Visual priority
 1. Compra
 2. Redención
 3. Estado visible del inventario
 4. Estado de la transacción
+
+## Responsive priority
+- desktop first for demo clarity
+- mobile usable but not the main demo target

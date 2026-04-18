@@ -1,43 +1,64 @@
 # IMPLEMENTATION_PLAN
 
-## Fase 1. Base del repositorio
+## 1. Project setup
+### 1.1 Repository
 - [x] Crear repo
-- [x] Inicializar Next.js
-- [x] Instalar ethers
-- [x] Crear contrato base
-- [x] Crear frontend base
-- [x] Subir a GitHub
+- [x] Subir base a GitHub
 
-## Fase 2. Definición conceptual
+### 1.2 Frontend setup
+- [x] Inicializar proyecto Next.js
+- [x] Instalar ethers
+- [x] Crear estructura base del frontend
+
+### 1.3 Contract setup
+- [x] Crear contrato base `CadenaDeTierra.sol`
+
+## 2. Product definition
+### 2.1 Product definition
 - [x] Definir problema principal
 - [x] Definir usuario principal
-- [x] Definir narrativa del MVP
-- [x] Definir pantallas principales
 - [x] Definir one-liner final
+- [x] Definir pantallas principales
+- [x] Definir narrativa del MVP
 
-## Fase 3. Deploy del contrato
+## 3. Contract deployment
+### 3.1 Remix preparation
 - [ ] Copiar contrato a Remix
 - [ ] Compilar contrato
-- [ ] Conectar Monad testnet
-- [ ] Deploy con inventario inicial
+
+### 3.2 Monad deployment
+- [ ] Conectar MetaMask a Monad testnet
+- [ ] Deployar con inventario inicial
 - [ ] Guardar contract address
 
-## Fase 4. Conectar frontend
+## 4. Frontend-contract connection
+### 4.1 Environment
 - [ ] Crear `.env.local`
-- [ ] Agregar address del contrato
+- [ ] Agregar `NEXT_PUBLIC_CONTRACT_ADDRESS`
+
+### 4.2 Local run
 - [ ] Ejecutar app localmente
 - [ ] Conectar wallet
 - [ ] Leer inventario y balance
 
-## Fase 5. Validar flujo demo
+## 5. Demo validation
+### 5.1 Purchase flow
 - [ ] Comprar tokens
 - [ ] Ver balance actualizado
-- [ ] Redimir tokens
-- [ ] Ver burn y reducción de inventario
-- [ ] Validar demo completa
 
-## Fase 6. Preparar pitch
-- [ ] Alinear copy del frontend
+### 5.2 Redemption flow
+- [ ] Redimir tokens
+- [ ] Ver burn actualizado
+- [ ] Ver inventario actualizado
+
+### 5.3 Final validation
+- [ ] Validar demo completa sin errores
+
+## 6. Demo readiness
+### 6.1 Copy alignment
+- [ ] Ajustar copy del frontend al concepto final
+
+### 6.2 Pitch prep
 - [ ] Preparar historia del problema
 - [ ] Preparar historia de solución
 - [ ] Preparar demo script
