@@ -14,11 +14,13 @@ DONE
 - Pantallas principales definidas: Compra y Redención
 
 IN PROGRESS
-- Deploy del contrato en Remix
 - Conexión del frontend al contrato desplegado
 
+DONE NOW
+- Contract address recibida: 0x0E9C787049e96B76eD07B5033647A379617bD598
+- Se confirmó que la referencia real de inventario para demo es 1,800,000
+
 NEXT
-- Obtener contract address en Monad testnet
 - Crear .env.local
 - Levantar app localmente
 - Validar flujo compra y redención

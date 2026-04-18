@@ -9,7 +9,7 @@ export const ABI = [
   "function totalBurned() view returns (uint256)",
 ];
 
-export const DEMO_TOTAL_INVENTORY = "10,000";
-export const DEMO_REMAINING_INVENTORY = "10,000";
+export const DEMO_TOTAL_INVENTORY = "1,800,000";
+export const DEMO_REMAINING_INVENTORY = "1,800,000";
 export const DEMO_BURNED = "0";
 export const DEMO_BALANCE = "0";
