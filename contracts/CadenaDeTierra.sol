@@ -18,12 +18,14 @@ contract CadenaDeTierra {
     event Redeemed(address indexed user, uint256 amount);
 
     constructor(uint256 _initialInventory) {
+        require(_initialInventory > 0, "initial inventory required");
         totalInventory = _initialInventory;
         remainingInventory = _initialInventory;
     }
 
     function buyTokens(uint256 amount) external {
         require(amount > 0, "amount > 0");
+        require(amount <= remainingInventory, "not enough inventory");
 
         balanceOf[msg.sender] += amount;
         totalSupply += amount;
