@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import { ethers } from "ethers";
+
+declare global {
+  interface Window {
+    ethereum?: ethers.Eip1193Provider;
+  }
+}
 import { ABI, CONTRACT_ADDRESS, DEMO_BALANCE, DEMO_BURNED, DEMO_REMAINING_INVENTORY } from "@/components/demo-data";
 import { InfoCard, MetricCard } from "@/components/ui";
 
