@@ -1,6 +1,6 @@
+import { CompraMetrics } from "@/components/contract-metrics";
 import { TopNav } from "@/components/top-nav";
-import { DEMO_REMAINING_INVENTORY, DEMO_TOTAL_INVENTORY } from "@/components/demo-data";
-import { InfoCard, MetricCard, PageIntro, PageShell } from "@/components/ui";
+import { InfoCard, PageIntro, PageShell } from "@/components/ui";
 import { Web3BuyPanel } from "@/components/web3-demo";
 
 export default function CompraPage() {
@@ -12,10 +12,7 @@ export default function CompraPage() {
         title="Compra derecho de extracción"
         description="La constructora adquiere una cantidad de caliche representada digitalmente para usarla cuando la necesite."
       />
-      <section className="grid gap-4 md:grid-cols-2">
-        <MetricCard label="Inventario total" value={DEMO_TOTAL_INVENTORY} helper="Reserva total del sistema" />
-        <MetricCard label="Disponible para compra" value={DEMO_REMAINING_INVENTORY} helper="Cantidad visible para operación" />
-      </section>
+      <CompraMetrics />
       <Web3BuyPanel />
       <section className="grid gap-6 md:grid-cols-2">
         <InfoCard title="Qué sucede aquí">

@@ -1,6 +1,6 @@
+import { RedencionMetrics } from "@/components/contract-metrics";
 import { TopNav } from "@/components/top-nav";
-import { DEMO_BALANCE, DEMO_BURNED } from "@/components/demo-data";
-import { InfoCard, MetricCard, PageIntro, PageShell } from "@/components/ui";
+import { InfoCard, PageIntro, PageShell } from "@/components/ui";
 import { Web3RedeemPanel } from "@/components/web3-demo";
 
 export default function RedencionPage() {
@@ -12,10 +12,7 @@ export default function RedencionPage() {
         title="Redime material y ejecuta burn"
         description="Al retirar material, la constructora consume parte de su saldo y el sistema registra el material consumido."
       />
-      <section className="grid gap-4 md:grid-cols-2">
-        <MetricCard label="Mi saldo" value={DEMO_BALANCE} helper="Derecho disponible para retiro" />
-        <MetricCard label="Material consumido" value={DEMO_BURNED} helper="Burn ejecutado on-chain" />
-      </section>
+      <RedencionMetrics />
       <Web3RedeemPanel />
       <section className="grid gap-6 md:grid-cols-2">
         <InfoCard title="Qué sucede aquí">
