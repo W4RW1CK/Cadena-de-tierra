@@ -1,7 +1,7 @@
 import Link from "next/link";
+import { ContractStatsGrid } from "@/components/contract-stats";
 import { TopNav } from "@/components/top-nav";
-import { DEMO_BALANCE, DEMO_BURNED, DEMO_REMAINING_INVENTORY, DEMO_TOTAL_INVENTORY } from "@/components/demo-data";
-import { InfoCard, MetricCard, PageIntro, PageShell } from "@/components/ui";
+import { InfoCard, PageIntro, PageShell } from "@/components/ui";
 
 export default function DashboardPage() {
   return (
@@ -12,12 +12,7 @@ export default function DashboardPage() {
         title="Vista ejecutiva del sistema"
         description="Resumen general de inventario, material consumido y accesos rápidos a compra y redención."
       />
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <MetricCard label="Inventario total" value={DEMO_TOTAL_INVENTORY} helper="Reserva visible del sistema" />
-        <MetricCard label="Inventario restante" value={DEMO_REMAINING_INVENTORY} helper="Disponible para redención" />
-        <MetricCard label="Material consumido" value={DEMO_BURNED} helper="Burn ejecutado" />
-        <MetricCard label="Mi saldo" value={DEMO_BALANCE} helper="Derecho disponible" />
-      </section>
+      <ContractStatsGrid balanceLabel="Mi saldo" balanceHelper="Derecho disponible" />
       <section className="grid gap-6 md:grid-cols-2">
         <InfoCard title="Acciones rápidas">
           <div className="flex flex-wrap gap-3">
