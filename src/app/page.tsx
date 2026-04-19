@@ -5,7 +5,7 @@ import { PageShell } from "@/components/ui";
 
 function VisualBlock({ title, subtitle }: { title: string; subtitle: string }) {
   return (
-    <div className="relative overflow-hidden rounded-[34px] bg-white/[0.035] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+    <div className="animate-fade-up-delay-2 relative overflow-hidden rounded-[34px] bg-white/[0.035] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(249,115,22,0.12)]">
       <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_45%,rgba(249,115,22,0.05))]" />
       <div className="relative flex h-full min-h-[260px] flex-col justify-between">
         <div className="h-28 w-28 rounded-full bg-gradient-to-br from-orange-400/40 via-orange-300/10 to-transparent blur-2xl" />
@@ -24,9 +24,9 @@ export default function Home() {
       <TopNav />
 
       <section className="grid gap-12 pt-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-center xl:pt-14">
-        <div className="space-y-8">
+        <div className="animate-fade-up space-y-8">
           <div className="flex items-center gap-4">
-            <div className="relative h-16 w-24 overflow-hidden rounded-2xl bg-white/5">
+            <div className="relative h-16 w-24 overflow-hidden rounded-2xl bg-white/5 animate-soft-pulse">
               <Image src="/logo.webp" alt="Cadena de Tierra" fill className="object-contain" priority />
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-orange-300/75">Cadena de Tierra</p>
@@ -40,17 +40,17 @@ export default function Home() {
             retirarlo sin fricción y entender lo que realmente queda disponible.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
-            <Link href="/dashboard" className="rounded-full bg-white px-7 py-3 font-semibold text-slate-950 transition hover:bg-slate-100">
+            <Link href="/dashboard" className="rounded-full bg-white px-7 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-[0_16px_40px_rgba(255,255,255,0.12)]">
               Ver experiencia
             </Link>
-            <Link href="/compra" className="rounded-full px-7 py-3 font-semibold text-white transition hover:bg-white/5">
+            <Link href="/compra" className="rounded-full px-7 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/5">
               Ir a compra
             </Link>
           </div>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
-          <div className="md:col-span-2 relative overflow-hidden rounded-[40px] bg-white/[0.03] p-8 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+        <div className="animate-fade-up-delay-1 grid gap-5 md:grid-cols-2">
+          <div className="md:col-span-2 relative overflow-hidden rounded-[40px] bg-white/[0.03] p-8 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition duration-300 hover:shadow-[0_24px_80px_rgba(249,115,22,0.10)]">
             <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_45%,rgba(249,115,22,0.05))]" />
             <div className="relative grid gap-6 md:grid-cols-[0.7fr_1.3fr] md:items-end">
               <div className="relative h-40 w-full overflow-hidden rounded-[28px] bg-white/5">
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-10 pt-8 md:grid-cols-3 xl:pt-12">
+      <section className="animate-fade-up-delay-2 grid gap-10 pt-8 md:grid-cols-3 xl:pt-12">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.24em] text-slate-500">01</p>
           <h2 className="text-2xl font-semibold">Menos fricción</h2>
