@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import { ethers } from "ethers";
-
-declare global {
-  interface Window {
-    ethereum?: ethers.Eip1193Provider;
-  }
-}
 import { ABI, CONTRACT_ADDRESS, DEMO_BALANCE, DEMO_BURNED, DEMO_REMAINING_INVENTORY } from "@/components/demo-data";
 import { InfoCard, MetricCard } from "@/components/ui";
+
+type EthereumWindow = Window & {
+  ethereum?: ethers.Eip1193Provider;
+};
+
+function getEthereum() {
+  return (window as EthereumWindow).ethereum;
+}
 
 export function Web3BuyPanel() {
   const [buyAmount, setBuyAmount] = useState("100");
@@ -20,7 +22,8 @@ export function Web3BuyPanel() {
 
   async function connectWallet() {
     try {
-      if (!window.ethereum) {
+      const ethereum = getEthereum();
+      if (!ethereum) {
         setStatus("Instala MetaMask para continuar.");
         return;
       }
@@ -28,7 +31,7 @@ export function Web3BuyPanel() {
         setStatus("Falta NEXT_PUBLIC_CONTRACT_ADDRESS en .env.local");
         return;
       }
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.BrowserProvider(ethereum);
       await provider.send("eth_requestAccounts", []);
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
@@ -46,12 +49,13 @@ export function Web3BuyPanel() {
 
   async function buyTokens() {
     try {
-      if (!window.ethereum || !CONTRACT_ADDRESS) {
+      const ethereum = getEthereum();
+      if (!ethereum || !CONTRACT_ADDRESS) {
         setStatus("Conecta wallet y configura el contrato para operar en vivo.");
         return;
       }
       setStatus("Procesando compra...");
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.BrowserProvider(ethereum);
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
       const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
@@ -113,7 +117,8 @@ export function Web3RedeemPanel() {
 
   async function connectWallet() {
     try {
-      if (!window.ethereum) {
+      const ethereum = getEthereum();
+      if (!ethereum) {
         setStatus("Instala MetaMask para continuar.");
         return;
       }
@@ -121,7 +126,7 @@ export function Web3RedeemPanel() {
         setStatus("Falta NEXT_PUBLIC_CONTRACT_ADDRESS en .env.local");
         return;
       }
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.BrowserProvider(ethereum);
       await provider.send("eth_requestAccounts", []);
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
@@ -143,12 +148,13 @@ export function Web3RedeemPanel() {
 
   async function redeemTokens() {
     try {
-      if (!window.ethereum || !CONTRACT_ADDRESS) {
+      const ethereum = getEthereum();
+      if (!ethereum || !CONTRACT_ADDRESS) {
         setStatus("Conecta wallet y configura el contrato para operar en vivo.");
         return;
       }
       setStatus("Procesando redención...");
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.BrowserProvider(ethereum);
       const signer = await provider.getSigner();
       const address = await signer.getAddress();
       const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
